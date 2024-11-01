@@ -1,12 +1,12 @@
 # Todos API
  A simple API for managing todos, built with Ruby on Rails.
  ## Table of Contents- 
- [Getting Started](#getting-started) 
- [Prerequisites](#prerequisites)
- [Installation](#installation)
- [Running the API](#running-the-api)
- [API Endpoints](#api-endpoints)
- [Testing](#testing)
+ - [Getting Started](#getting-started)
+ - [Prerequisites](#prerequisites)
+ - [Installation](#installation)
+ - [Running the API](#running-the-api)
+ - [API Endpoints](#api-endpoints)
+ - [Testing](#testing)
  
  ## Getting Started
  This API allows users to create, read, update, and delete (CRUD) todo items. It's designed as a
