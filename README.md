@@ -1,10 +1,22 @@
 # Todos API
  A simple API for managing todos, built with Ruby on Rails.
- ## Table of Contents- [Getting Started](#getting-started)- [Prerequisites](#prerequisites)- [Installation](#installation)- [Running the API](#running-the-api)- [API Endpoints](#api-endpoints)- [Testing](#testing)- [Contributing](#contributing)- [License](#license)
+ ## Table of Contents- 
+ - [Getting Started](#getting-started)
+ - [Prerequisites](#prerequisites)
+ - [Installation](#installation)
+ - [Running the API](#running-the-api)
+ - [API Endpoints](#api-endpoints)
+ - [Testing](#testing)
+ 
  ## Getting Started
  This API allows users to create, read, update, and delete (CRUD) todo items. It's designed as a
  basic template to start building and deploying a Ruby on Rails-based API.
- ## Prerequisites- **Ruby**: Ensure you have Ruby installed. Version 3.0+ is recommended.- **Rails**: The project uses Rails 7+.- **Bundler**: `gem install bundler` if you haven't installed it.- **Git**: For version control and cloning the repository.
+ ## Prerequisites
+ - **Ruby**: Ensure you have Ruby installed. Version 3.0+ is recommended.
+ - **Rails**: The project uses Rails 7+.
+ - **Bundler**: `gem install bundler` if you haven't installed it.
+ - **Git**: For version control and cloning the repository.
+   
 ## Installation
  1. **Clone the Repository**
    ```bash
