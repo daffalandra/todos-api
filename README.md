@@ -44,7 +44,7 @@
  | Endpoint                | Method | Description              |
  |-------------------------|--------|--------------------------|
  | `/signup`               | POST   | Create new User,         |
- |                                  | and get Authorization key|
+ |                         |        | and get Authorization key|
  | `/todos`                | GET    | Retrieve all todos       |
  | `/todos/:id`            | GET    | Retrieve a single todo   |
  | `/todos`                | POST   | Create a new todo        |
