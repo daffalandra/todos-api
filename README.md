@@ -43,42 +43,66 @@
  ## API Endpoints
  | Endpoint                | Method | Description              |
  |-------------------------|--------|--------------------------|
+ | `/signup`               | POST   | Create new User,         |
+ |                                  | and get Authorization key|
  | `/todos`                | GET    | Retrieve all todos       |
  | `/todos/:id`            | GET    | Retrieve a single todo   |
  | `/todos`                | POST   | Create a new todo        |
  | `/todos/:id`            | PUT    | Update an existing todo  |
  | `/todos/:id`            | DELETE | Delete a todo            |
-### Sample Requests- **Get all Todos** with postman
+ | `/todos/:todo_id/items` | POST   | Create a new item        |
+ | `/todos/:todo_id/items` | GET    | Retrieve all item on one |
+ |                         |        | todo                     |
+ | `/todos/:id/items`      | PUT    | Update an existing todo  |
+ |                         |        | item                     |
+ | `/todos/:id/items`      | DELETE | Delete a todo item       |
+ 
+ 
+### Sample Requests with postman
+- **Create a new User**
+  ```bash
+  # Signup a new user - get token from here
+  POST http://localhost:3000/signup name=ash email=ash@email.com password=foobar password_confirmation=foobar
+  ```
+- **Get all Todos** 
   ```bash
   GET http://localhost:3000/todos
+  Set Header Authorization = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE0ODg5MDEyNjR9.7txvLgDzFdX5NIUGYb3W45oNIXinwB_ITu3jdlG5Dds'
   ```
   - **Create a New Todo**
   ```bash
   POST http://localhost:3000/todos?title=Bach&created_by=1
+  Set Header Authorization = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE0ODg5MDEyNjR9.7txvLgDzFdX5NIUGYb3W45oNIXinwB_ITu3jdlG5Dds'
   ```
   - **Update a Todo**
   ```bash
   PUT http://localhost:3000/todos/:id?title=Beethoven (:id = 1)
+  Set Header Authorization = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE0ODg5MDEyNjR9.7txvLgDzFdX5NIUGYb3W45oNIXinwB_ITu3jdlG5Dds'
   ```
   - **Destroy a Todo** 
   ```bash
   DELETE http://localhost:3000/todos/:id (:id = 1)
+  Set Header Authorization = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE0ODg5MDEyNjR9.7txvLgDzFdX5NIUGYb3W45oNIXinwB_ITu3jdlG5Dds'
   ```
   ### Sample Requests- **Get all Items** with postman
   ```bash
   GET http://localhost:3000/todos/:todo_id/items
+  Set Header Authorization = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE0ODg5MDEyNjR9.7txvLgDzFdX5NIUGYb3W45oNIXinwB_ITu3jdlG5Dds'
   ```
   - **Create a New Todo**
   ```bash
   POST http://localhost:3000/todos/:todo_id/items?name=Listen to 5th Symphony&done=false (todo_id = 1)
+  Set Header Authorization = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE0ODg5MDEyNjR9.7txvLgDzFdX5NIUGYb3W45oNIXinwB_ITu3jdlG5Dds'
   ```
   - **Update a Todo**
   ```bash
   PUT http://localhost:3000/todos/:todo_id/items/:id?done=true (todo_id = 1, id = 1)
+  Set Header Authorization = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE0ODg5MDEyNjR9.7txvLgDzFdX5NIUGYb3W45oNIXinwB_ITu3jdlG5Dds'
   ```
   - **Destroy a Todo** 
   ```bash
   DELETE http://localhost:3000/todos/:todo_id/items/:id (todo_id = 1, id = 1)
+  Set Header Authorization = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE0ODg5MDEyNjR9.7txvLgDzFdX5NIUGYb3W45oNIXinwB_ITu3jdlG5Dds'
   ```
  ## Testing
  To run the tests, use:
