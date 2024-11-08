@@ -63,46 +63,47 @@
   ```bash
   # Signup a new user - get token from here
   POST http://localhost:3000/signup name=ash email=ash@email.com password=foobar password_confirmation=foobar
+  # Will return auth_token
   ```
 - **Get all Todos** 
   ```bash
   GET http://localhost:3000/todos
-  Set Header Authorization = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE0ODg5MDEyNjR9.7txvLgDzFdX5NIUGYb3W45oNIXinwB_ITu3jdlG5Dds'
+  Set Header Authorization = 'auth_token'
   ```
   - **Create a New Todo**
   ```bash
   POST http://localhost:3000/todos?title=Bach&created_by=1
-  Set Header Authorization = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE0ODg5MDEyNjR9.7txvLgDzFdX5NIUGYb3W45oNIXinwB_ITu3jdlG5Dds'
+  Set Header Authorization = 'auth_token'
   ```
   - **Update a Todo**
   ```bash
   PUT http://localhost:3000/todos/:id?title=Beethoven (:id = 1)
-  Set Header Authorization = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE0ODg5MDEyNjR9.7txvLgDzFdX5NIUGYb3W45oNIXinwB_ITu3jdlG5Dds'
+  Set Header Authorization = 'auth_token'
   ```
   - **Destroy a Todo** 
   ```bash
   DELETE http://localhost:3000/todos/:id (:id = 1)
-  Set Header Authorization = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE0ODg5MDEyNjR9.7txvLgDzFdX5NIUGYb3W45oNIXinwB_ITu3jdlG5Dds'
+  Set Header Authorization = 'auth_token'
   ```
   ### Sample Requests- **Get all Items** with postman
   ```bash
   GET http://localhost:3000/todos/:todo_id/items
-  Set Header Authorization = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE0ODg5MDEyNjR9.7txvLgDzFdX5NIUGYb3W45oNIXinwB_ITu3jdlG5Dds'
+  Set Header Authorization = 'auth_token'
   ```
   - **Create a New Todo**
   ```bash
   POST http://localhost:3000/todos/:todo_id/items?name=Listen to 5th Symphony&done=false (todo_id = 1)
-  Set Header Authorization = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE0ODg5MDEyNjR9.7txvLgDzFdX5NIUGYb3W45oNIXinwB_ITu3jdlG5Dds'
+  Set Header Authorization = 'auth_token'
   ```
   - **Update a Todo**
   ```bash
   PUT http://localhost:3000/todos/:todo_id/items/:id?done=true (todo_id = 1, id = 1)
-  Set Header Authorization = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE0ODg5MDEyNjR9.7txvLgDzFdX5NIUGYb3W45oNIXinwB_ITu3jdlG5Dds'
+  Set Header Authorization = 'auth_token'
   ```
   - **Destroy a Todo** 
   ```bash
   DELETE http://localhost:3000/todos/:todo_id/items/:id (todo_id = 1, id = 1)
-  Set Header Authorization = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE0ODg5MDEyNjR9.7txvLgDzFdX5NIUGYb3W45oNIXinwB_ITu3jdlG5Dds'
+  Set Header Authorization = 'auth_token'
   ```
  ## Testing
  To run the tests, use:
